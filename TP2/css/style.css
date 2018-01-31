@@ -12,6 +12,7 @@ img{
 
 table{
 	border-collapse: collapse;
+	margin-bottom: 7px;
 }
 
 td 
@@ -28,15 +29,10 @@ th{
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
 
-	table{
-		display: block;
-	}
 
-	tr{
-		display: table;
-	}
-	td,th{
-		display: table-row;
+	td,th,tr,table,tbody{
+		display: block;
+		width: 100%;
 	}
 }
 
