@@ -10,6 +10,11 @@ img{
 	margin: auto;
 }
 
+p{
+	background-image: url(../images/bg.jpg);
+	color: white;
+}
+
 table{
 	border-collapse: collapse;
 	margin-bottom: 7px;
