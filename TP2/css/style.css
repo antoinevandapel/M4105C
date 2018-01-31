@@ -10,7 +10,34 @@ img{
 	margin: auto;
 }
 
-@media screen and(max-width: 700px){
+table{
+	border-collapse: collapse;
+}
+
+td 
+{
+    border: 1px solid grey; 
+}
+
+th{
+	background-color: grey;
+	font-weight: bold;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+	table{
+		display: block;
+	}
+
+	tr{
+		display: table;
+	}
+	td,th{
+		display: table-row;
+	}
 }
 
 @media (-webkit-min-device-pixel-ratio: 2){
