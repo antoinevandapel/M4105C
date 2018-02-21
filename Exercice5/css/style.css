@@ -1,13 +1,33 @@
-/** Header **/
+/********* Général *********/
+html{
+	height:100%;
+	width:100%;
+	margin:0px;
+	font-family: "Arial", Sans-serif;
+}
+body{
+	min-height: 100%;
+	width:100%;
+	margin:0px;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+
+/********* Header *********/
 header{
 	display: flex;
 	position: relative;
 	text-align:center;
+	background:black;
 }
 
 #logo{
-	width:12rem;
-	height:4rem;
+	width:10rem;
+	height:3.5rem;
+	margin-left:1rem;
+	margin-top: 0.5rem;
 	display:inline-block;
 }
 
@@ -29,6 +49,7 @@ header{
   border: 1px solid #aaa;
   border-radius: 5px;
   box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+  margin-right: 1rem;
 }
 
 .search input { text-indent: 32px;}
@@ -38,13 +59,20 @@ header{
   left: 10px;
 }
 
-/** Menu **/
+/********* Menu *********/
 nav{
 	top:50%;
 	bottom:50%;
 	display:inline-block;
 	margin:auto;
 	margin-left: 20px;
+	margin-right: 10px;
+}
+
+#droit{
+	right:0px;
+	top:25%;
+	position:absolute;
 }
 
 nav ul
@@ -59,6 +87,10 @@ nav ul li
     display: inline;
 }
 
+nav ul li a{
+	color:white;
+}
+
 nav li:not(:first-child):before {
     content: " | ";
 }
@@ -67,39 +99,97 @@ header a{
     text-decoration: none;
 }
 
-/** Contenu **/
+/********* Contenu *********/
 
-img{
-	width: 100%;
-	height: 100%;
-}
-
-#droit{
-	right:0px;
-	top:25%;
-	position:absolute;
+#contenu { 
+    /*background: linear-gradient(#003461, #000428);*/
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
 }
 
 #banniere{
-	height: 80%;
+	height: 70%;
+	width: 80%;
+	display: block;
+	margin-left:auto;
+	margin-right:auto; 
+}
+
+#galerie
+{
+    margin-bottom: : 2rem;
+    padding: 0;
+    display:block;
+    margin-left: auto;
+    background: black;
+    margin-right:auto;
+}
+
+#galerie li
+{
+    list-style-type: none;
+    display: inline-block;
+    color:white;
+    text-align: center;
+    width: 180px;
+	height:220px;
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+#galerie li:first-child
+{
+    margin-left: auto;
+}
+
+.galimg{
+	max-width: 200px;
+	max-height: 200px;
+}
+
+/*.galerie{
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}*/
+
+.formap{
+	overflow: hidden;
+	width: 100%;
+	position: relative;
 }
 
 #bloc{
 	display: inline-block;
+	position: absolute
+	width:250px;
+	margin:auto;
+	float:left;
 }
 
 .blocmap, .formulaire{
 	display: inline-block;
+	position:absolute;
+	margin: auto;
+	float:left;
 }
 
-/** Footer **/
+/********* Footer *********/
 
 footer{
 	background:black;
-	color: white;
+	color:white;
+	height:25px;
 }
 
-/** Media queries **/
+footer p{
+	text-align: right;
+}
+
+/********* Media queries *********/
 
 @media only screen and (max-width : 750px){
   header li {
