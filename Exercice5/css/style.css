@@ -1,15 +1,171 @@
+*{
+	box-sizing: border-box;
+}
+
 header{
 	display: flex;
 	position: relative;
+	text-align:center;
 }
+
+
 
 #logo{
 	width:150px;
 	height:60px;
+	display:inline-block;
+}
+
+#droit{
+	right:0px;
+	top:25%;
+	position:absolute;
 }
 
 nav{
+	top:50%;
+	bottom:50%;
+	display:inline-block;
+	margin:auto;
+	margin-left: 20px;
+}
 
-	right: 0px;
-	position: absolute;
+nav ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li
+{
+    list-style-type: none;
+    display: inline;
+}
+
+nav li:not(:first-child):before {
+    content: " | ";
+}
+
+#banniere{
+	height: 80%;
+}
+
+.search {
+  position: relative;
+  color: #aaa;
+  font-size: 16px;
+  display:inline-block;
+  margin: auto;
+  top:50%;
+  bottom:50%;
+}
+
+.search input {
+  width: 250px;
+  height: 32px;
+
+  background: #fcfcfc;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+}
+
+.search input { text-indent: 32px;}
+.search .fa-search { 
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* menu */
+
+header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+header .menu-icon .navicon:before,
+header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+header .menu-btn {
+  display: none;
+}
+
+header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* Media queries */
+
+@media (min-width: 48em) {
+  header li {
+    float: left;
+  }
+  header li a {
+    padding: 20px 30px;
+  }
+  header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  header .menu-icon {
+    display: none;
+  }
 }
