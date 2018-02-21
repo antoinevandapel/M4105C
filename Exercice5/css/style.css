@@ -79,7 +79,7 @@ nav li:not(:first-child):before {
 
 /* menu */
 
-header .menu {
+header #menu {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
@@ -130,7 +130,7 @@ header .menu-btn {
   display: none;
 }
 
-header .menu-btn:checked ~ .menu {
+header .menu-btn:checked ~ #menu {
   max-height: 240px;
 }
 
@@ -153,19 +153,23 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 
 /* Media queries */
 
-@media (min-width: 48em) {
+@media only screen and (min-width : 150px) and (max-width : 780px){
   header li {
     float: left;
   }
   header li a {
     padding: 20px 30px;
   }
-  header .menu {
+  header #menu {
     clear: none;
-    float: right;
     max-height: none;
   }
   header .menu-icon {
     display: none;
   }
+  	.search
+	{
+		width: 95%;
+		margin: 0 auto;
+	}
 }
