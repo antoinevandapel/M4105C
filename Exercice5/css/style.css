@@ -1,47 +1,15 @@
-html {font-size:100%}
-
-h1{
-	font-size: 8vw;
+header{
+	display: flex;
+	position: relative;
 }
 
-img{
-	width: 300px;
-	display:block;
-	margin: auto;
+#logo{
+	width:150px;
+	height:60px;
 }
 
-p{
-	background-image: url(../images/bg.jpg);
-	background-size: 100% 100%;
-	color: white;
-}
+nav{
 
-table{
-	border-collapse: collapse;
-	margin-bottom: 7px;
-}
-
-td 
-{
-    border: 1px solid grey; 
-}
-
-th{
-	background-color: grey;
-	font-weight: bold;
-}
-
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-
-
-	td,th,tr,table,tbody{
-		display: block;
-		width: 100%;
-	}
-}
-
-@media (-webkit-min-device-pixel-ratio: 2){
-
+	right: 0px;
+	position: absolute;
 }
