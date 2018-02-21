@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 		<title>Le site de l'internet</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" language="JavaScript" src="js/script.js"></script>
 		<link rel="icon" type="image/png" href="images/favicon.png">
 	</head>
 	<body>
@@ -12,15 +13,18 @@
 			<span>
 				<a href="index.html"><img id="logo" src="images/logo.jpg" alt="Logo du jeu"></a>
 				   	<span id="droit">
-					   	<!--<nav id="menu">
-					   		<input class="menu-btn" type="checkbox" id="menu-btn" />
-  							<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+				   		<div id="hamburger">
+  							<a href="javascript:hamburger_click();">
+    							<p>&#9776;</p>
+  							</a>
+						</div>
+					   	<nav id="menu">
 					   		<ul>
 								<li><a href="index.html">Accueil</a></li>
 								<li><a href="index.html">Titre 1</a></li>
 								<li><a href="index.html">Contact</a></li>
 					   		</ul>
-					   	</nav>-->
+					   	</nav>
 					   	<div class="search">
   							<span class="fa fa-search"></span>
   							<input placeholder="Search...">
