@@ -110,6 +110,20 @@ header a{
     overflow: hidden;
 }
 
+#contenu #presentation{
+	padding-left: 2rem;
+	padding-right:10rem;
+	margin-bottom: 2rem;
+}
+
+#contenu h1{
+	padding-left: 1rem;
+}
+
+p,h1,h2{
+	color:white;
+}
+
 #banniere{
 	height: 70%;
 	width: 80%;
@@ -121,61 +135,81 @@ header a{
 #galerie
 {
     margin-bottom: : 2rem;
+    width:90%;
     padding: 0;
-    display:block;
     margin-left: auto;
     background: black;
     margin-right:auto;
 }
 
+#galerie ul{
+	text-align: center;
+}
+
 #galerie li
-{
-    list-style-type: none;
+{ 
     display: inline-block;
     color:white;
     text-align: center;
-    width: 180px;
-	height:220px;
-	margin-left: 2rem;
-	margin-right: 2rem;
+    margin-top:1rem;
+    width:25%; 
+	height:230px;
+
 }
 
-#galerie li:first-child
-{
-    margin-left: auto;
-}
 
 .galimg{
+	min-width: 150px;
+	min-height: 50px;
 	max-width: 200px;
 	max-height: 200px;
 }
 
-/*.galerie{
-	overflow: hidden;
+#formap{
 	width: 100%;
-	position: relative;
-}*/
-
-.formap{
-	overflow: hidden;
-	width: 100%;
-	position: relative;
-}
-
-#bloc{
 	display: inline-block;
-	position: absolute
-	width:250px;
-	margin:auto;
-	float:left;
+	background: black;
 }
 
-.blocmap, .formulaire{
-	display: inline-block;
-	position:absolute;
-	margin: auto;
-	float:left;
+#formap input,label{
+	margin:1rem;
+	box-sizing: border-box;
 }
+
+#blocmap, #formulaire{
+	width: 40%;
+}
+
+#blocmap{
+	float:left;
+	padding-left: 4rem;
+}
+
+#formulaire{
+	float: right;
+	height: 100%;
+	display: block;
+	color: white;
+	padding-right: 4rem;
+}
+
+
+.left{
+	float:left;
+	width:40%;
+}
+
+.right{
+	float:right;
+	width: 40%;
+}
+
+#email,#message{
+	width: 94%;
+	margin:1rem;
+	box-sizing: border-box;
+}
+
 
 /********* Footer *********/
 
@@ -183,6 +217,7 @@ footer{
 	background:black;
 	color:white;
 	height:25px;
+	margin-top:-2rem;
 }
 
 footer p{
