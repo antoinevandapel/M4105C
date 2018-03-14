@@ -42,21 +42,20 @@ header{
 }
 
 .search input {
-  width: 150px;
+  width: 10rem;
   height: 32px;
-
+  float:right;
+  text-indent: 32px;
   background: #fcfcfc;
   border: 1px solid #aaa;
   border-radius: 5px;
   box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
-  margin-right: 1rem;
 }
 
-.search input { text-indent: 32px;}
 .search .fa-search { 
   position: absolute;
   top: 10px;
-  left: 10px;
+  left: 2rem;
 }
 
 /********* Menu *********/
@@ -185,6 +184,10 @@ p,h1,h2{
 	padding-left: 4rem;
 }
 
+#map{
+	height:25em;
+}
+
 #formulaire{
 	float: right;
 	height: 100%;
@@ -226,23 +229,69 @@ footer p{
 
 /********* Media queries *********/
 
-@media only screen and (max-width : 750px){
-  header li {
+@media only screen and (max-width : 1050px){
+  #blocmap{
+		width: 80%;
+		float: none;
+  }	
+
+  #formulaire{
+  		width:80%;
+  		float:none;
+  		padding-left:1rem;
+  }
+}
+
+
+@media only screen and (max-width : 900px){
+  	header li {
     float: left;
-  }
-  header li a {
+  	}
+  	header li a {
     padding: 20px 30px;
-  }
-  header #menu {
+  	}
+
+  	#galerie li{
+  		width:100%;
+  	}
+
+  .left,.right{
+  		width:30%;
+  	}
+
+  	#map{
+		height:15em;
+	}
+
+	.email,.message{
+		width:;
+	}
+
+  	header #menu {
     clear: none;
+    display:none;
     max-height: none;
-  }
-  header .menu-icon {
+  	}
+  	header .menu-icon {
     display: none;
-  }
+  	}
   	.search
 	{
 		width: 50%;
 		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width : 400px){
+	#contenu #presentation{
+		padding-right: 2rem;
+	}
+
+	#blocmap{
+		padding-left: 2rem;
+	}
+
+	.search{
+		width: 70%;
 	}
 }
