@@ -23,6 +23,41 @@ header{
 	background:black;
 }
 
+.hamburger{
+  display:none;
+  background:none;
+  
+  padding:1rem 2rem 1rem 2rem;
+  color:#999;
+  border:0;
+  font-size:2rem;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.cross{
+  visibility: hidden;
+  background:none;
+  position:absolute;
+  top:0px;
+  padding:7px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+
+#telephone{
+	display:none;
+	text-decoration: none;
+	color:white;
+}
+
 #logo{
 	width:10rem;
 	height:3.5rem;
@@ -244,12 +279,8 @@ footer p{
 
 
 @media only screen and (max-width : 900px){
-  	header li {
-    float: left;
-  	}
-  	header li a {
-    padding: 20px 30px;
-  	}
+
+
 
   	#galerie li{
   		width:100%;
@@ -265,22 +296,54 @@ footer p{
 		width:;
 	}
 
-  	header #menu {
-    clear: none;
-    display:none;
-    max-height: none;
-  	}
   	header .menu-icon {
     display: none;
   	}
   	.search
 	{
-		width: 50%;
 		margin: 0 auto;
 	}
 }
 
-@media only screen and (max-width : 400px){
+@media only screen and (max-width : 600px){
+	.hamburger{
+		display:inline-block;
+		position: absolute;	
+	}
+
+	#telephone{
+		display:inline-block;
+		font-size: 28px;
+		width: 0%;
+	}
+	
+	.{
+		position: absolute;	
+	}
+
+	span{
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	#logo{
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	header li {
+    	float: left;
+  	}
+  	header li a {
+    	padding: 20px 30px;
+  	}
+
+	header #menu {
+	    clear: none;
+	    display:none;
+	    max-height: none;
+  	}
+
 	#contenu #presentation{
 		padding-right: 2rem;
 	}
@@ -290,7 +353,7 @@ footer p{
 	}
 
 	.search{
-		width: 70%;
+		display: none;
 	}
 
 	#map{
